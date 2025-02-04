@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<body>
+    <div class="tasks-container">
+        <section class="task-form">
+            <h3>Add Study Task</h3>
+            <form id="taskForm">
+                <label for="studySubject">Study Subject:</label>
+                <input type="text" id="studySubject" name="studySubject" placeholder="Enter the subject" required>
+                <br>
+                
+                <label for="task">Task Description:</label>
+                <input type="text" id="task" name="task" placeholder="Enter the task description" required>
+                <br>
+                
+                <label for="goal">Goal:</label>
+                <input type="text" id="goal" name="goal" placeholder="Enter your goal" required>
+                <br>
+        
+                <label for="startdate">Starting Date:</label>
+                <input type="datetime-local" id="startdate" name="startdate" required>
+                <br>
+                
+                <label for="finishDate">Finishing Date:</label>
+                <input type="datetime-local" id="finishDate" name="finishDate" required>
+                <br>
+                <br>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+    
+        <section class="task-list">
+            <h3>Your Tasks</h3>
+            <div id="taskContainer"></div>
+        </section>
+    </div>
+    
+<style>
+    body {
+            font-family: 'Poppins', sans-serif;
+            background: url('8.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #010101;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            background-color: rgb(84, 44, 86);
+            color: rgb(247, 239, 239);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(53, 53, 92);
+        }
+
+    .tasks-container {
+        display: flex;
+        flex-direction: column; /* Stack form and task list vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+    }
+    
+    .task-form, .task-list {
+        padding: 20px;
+        background: rgba(117, 46, 104, 0.8);
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px; /* Space between form and task list */
+    }
+    
+    .task-list {
+        background: rgba(175, 121, 165, 0.8);
+    }
+</style>
+<script>
+    // JavaScript to handle form submission and display tasks
+    document.getElementById('taskForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get the values from the form
+        const studySubject = document.getElementById('studySubject').value;
+        const taskDescription = document.getElementById('task').value;
+
+        // Create a new task item
+        const taskItem = document.createElement('div');
+        taskItem.classList.add('task-item');
+        taskItem.innerHTML = `<strong>${studySubject}</strong>: ${taskDescription}`;
+
+        // Add the task item to the task container
+        document.getElementById('taskContainer').appendChild(taskItem);
+
+        // Clear the form fields
+        document.getElementById('taskForm').reset();
+    });
+</script>
+</body>
+</html>

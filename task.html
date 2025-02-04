@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks</title>
+</head>
+<body>
+
+
+
+     <!-- Task Form Section -->
+    <div id="tasks">
+    <section class="task-form">
+        <h3>Add Study Task</h3>
+        <form id="taskForm">
+            <label for="studySubject">Study Subject:</label>
+            <input type="text" id="studySubject" name="studySubject" placeholder="Enter the subject" required>
+            <br>
+            
+            <label for="task">Task Description:</label>
+            <input type="text" id="task" name="task" placeholder="Enter the task description" required>
+            <br>
+            
+            <label for="goal">Goal:</label>
+            <input type="text" id="goal" name="goal" placeholder="Enter your goal" required>
+            <br>
+    
+            <label for="startdate">Starting Date:</label>
+            <input type="datetime-local" id="startdate" name="startdate" required>
+            <br>
+            
+            <label for="finishDate">Finishing Date:</label>
+            <input type="datetime-local" id="finishDate" name="finishDate" required>
+            <br>
+            <br>
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+    <section class="task-list">
+        <h3>Your Tasks</h3>
+    </section>
+</div>
+    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Button</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('6.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #010101;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            background-color: rgb(84, 44, 86);
+            color: rgb(247, 239, 239);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(53, 53, 92);
+        }
+
+        
+        
+        
+        /*.task-form {
+            padding: 20px;
+            background: rgba(117, 46, 104, 0.8);
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;//centre of the form
+            position: absolute;
+            top: 50%;left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .task-list {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(175, 121, 165, 0.8);
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }*/
+        .tasks{
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center align the items */
+            justify-content: center; /* Center the content vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        
+        .task-form {
+            padding: 20px;
+            background: rgba(117, 46, 104, 0.8);
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .task-list {
+            margin-top: 20px; /* Ensures spacing between form and list */
+            padding: 20px;
+            background: rgba(175, 121, 165, 0.8);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+}
+
+
+        .task-item {
+            background: rgba(0, 66, 92, 0.1);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
+
+
+    
+
+    
+</body>
+</html>
